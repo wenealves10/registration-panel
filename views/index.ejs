@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Painel de Cadastro de Produtos</title>    
+</head>
+<body>
+    <header class="cabeca container">
+        <div class="logo"></div>
+        <nav class="menu">
+            <ul class="lista">
+                <li><a href="/">Home</a></li>
+                <li><a href="#">Vendas</a></li>
+                <li><a href="/cadastro">Produtos</a></li>
+                <li><a href="#">Sobre</a></li>
+            </ul><!--lista-->
+            <div class="clear"></div><!--clear-->
+        </nav><!--Menu-->
+    </header><!--Cabeca-->
+    <section class="section">
+       <table>
+           <thead>
+               <tr>
+                   <th>Nome</th>
+                   <th>Quantidade</th>
+                   <th>Valor</th>
+               </tr>
+            </thead>
+               <tbody>
+                 <% produtos.forEach(a => {%>
+                   <tr>
+                       <td><%= a.nome%></td>
+                       <td><%= a.qtd%></td>
+                       <td><%= a.preco%></td>
+                       
+                   </tr>
+                 <%})%>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td>Total R$</td>
+                        <td colspan="2" style="text-align: end;"><%= formatMoney(total)%></td>
+                    </tr>
+                </tfoot>
+       </table>  
+    </section>
+    <script src="/js/script.js"></script>
+</body>
+</html>
