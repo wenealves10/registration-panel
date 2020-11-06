@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style2.css">
+    <title>Cadastro de Produtos</title>
+</head>
+
+<body>
+    <div>
+        <form action="http://192.168.0.102:8080/cadastro" method="POST">
+            <span> <strong>Nome </strong>do Produto(s): </span>
+            <input type="text" name="nome" id="texto" placeholder="Digite o nome do produto" />
+            <span><strong>Preço</strong> do Produto(s): </span>
+            <input id="preco" type="text" name="preco" placeholder="R$" onKeyPress="return(moeda(this,'.',',',event))"/>
+            <span><strong>Quantidade</strong> de Produto(S): </span>
+            <input type="text" name="qtd" id="qtd" placeholder="Digite a quantidade" />
+            <button type="submit">Incluir</button>
+        </form>
+    </div>
+
+    <script src="/js/script.js"></script>
+</body>
+
+</html>
